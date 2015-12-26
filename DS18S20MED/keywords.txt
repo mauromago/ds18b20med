@@ -1,0 +1,24 @@
+#######################################
+# Syntax Coloring Map for primalib
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+DS18S20MED 	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+OneWireReset    KEYWORD2
+OneWireOutByte  KEYWORD2
+OneWireInByte   KEYWORD2
+getCurrentTemp  KEYWORD2
+DataConv    KEYWORD2
+lettCycle   KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
