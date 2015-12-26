@@ -11,7 +11,7 @@ Three are the more important funtions:
 just return  the value of one single read from sensor in binary form
 
 -lettCycle (SENSOR) ;
-make a reading cycle so made two read discarded (looks me that first after some minute is lower that other) than make more read and calculate the median value from them.
+make a reading cycle so made two read discarded (looks me that first read after some minute of not use is lower that other) than make more read and calculate the median value from them.
 
 -DataConv (value);
 convert the value in caracter sting oseful for send it on ethernet
