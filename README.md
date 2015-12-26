@@ -7,25 +7,25 @@ Using DS18S20 with Arduino for read outside temperature i discovered that air is
 # ------
 Three are the more important funtions:
 
--getCurrentTemp
+-getCurrentTemp (SENSOR) ;
 just return  the value of one single read from sensor in binary form
 
--lettCycle
+-lettCycle (SENSOR) ;
 make a reading cycle so made two read discarded (looks me that first after some minute is lower that other) than make more read and calculate the median value from them.
 
--DataConv
+-DataConv (value);
 convert the value in caracter sting oseful for send it on ethernet
 
 # ------
 You have to generate the class instance with three parameter
 DS18S20MED mytest (shortDelay, shortLoop, lettTodo);
 
--shodtDelay
+-shodtDelay ; 
 delay in millisecond after the two discarded sensor read in cycle
 
--shortLoop
+-shortLoop ; 
 delay after sensor read in useful reading in the cycle
 
--lettTodo
+-lettTodo ; 
 the number of reading to do for calculare de median value. The two higher value and the two lower value are removed from values used for median. Two discarde read are not included in this value
 
