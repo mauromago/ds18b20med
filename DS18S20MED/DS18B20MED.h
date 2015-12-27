@@ -1,15 +1,15 @@
-#ifndef DS18S20MED_H_INCLUDED
-#define DS18S20MED_H_INCLUDED
+#ifndef DS18B20MED_H_INCLUDED
+#define DS18B20MED_H_INCLUDED
 
 #include "Arduino.h"
 
-class DS18S20MED{
+class DS18B20MED{
 
 private:
 int _sDelay, _sLoop, _letture;
 	
 public:
-DS18S20MED (int sDelay, int sLoop, int letture);
+DS18B20MED (int sDelay, int sLoop, int letture);
 
 void OneWireReset (int Pin);
 void OneWireOutByte (int Pin, uint8_t d);
