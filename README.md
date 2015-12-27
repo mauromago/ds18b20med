@@ -1,5 +1,5 @@
 # ds18s20med
-arduino library for read temperature from ds18s20 with multiple read and median value
+arduino library for read temperature from ds18b20 with multiple read and median value. Named 18s20 for error. It require SPI library.
  
 Using DS18S20 with Arduino for read outside temperature i discovered that air is not so uniform in its temperature. so i implemented code to make more read and calculate the median value. Now, to make my code more easy to write i put this code in a library. More important part are copied from other and older library not by me.
 
