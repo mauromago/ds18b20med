@@ -6,7 +6,7 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-DS18S20MED 	KEYWORD1
+DS18B20MED 	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
