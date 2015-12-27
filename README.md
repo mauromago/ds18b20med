@@ -18,7 +18,7 @@ convert the value in caracter sting oseful for send it on ethernet
 
 # ------
 You have to generate the class instance with three parameter
-DS18S20MED mytest (shortDelay, shortLoop, lettTodo);
+DS18B20MED mytest (shortDelay, shortLoop, lettTodo);
 
 -shodtDelay ; 
 delay in millisecond after the two discarded sensor read in cycle
