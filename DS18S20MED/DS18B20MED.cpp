@@ -5,10 +5,10 @@ sensori di temperatura ds18b20
 ===========================================
 */
 #include <SPI.h>
-#include <DS18S20MED.h>
+#include <DS18B20MED.h>
 #include "Arduino.h"
 
-DS18S20MED::DS18S20MED(int sDelay, int sLoop, int letture)
+DS18B20MED::DS18B20MED(int sDelay, int sLoop, int letture)
 {
  _sDelay = sDelay;
  _sLoop = sLoop;
@@ -17,7 +17,7 @@ DS18S20MED::DS18S20MED(int sDelay, int sLoop, int letture)
 }
 
 // Reset the 1-wire bus
-void DS18S20MED::OneWireReset (int Pin) // reset.  Should improve to act as a presence pulse
+void DS18B20MED::OneWireReset (int Pin) // reset.  Should improve to act as a presence pulse
 {
   digitalWrite (Pin, LOW);
   pinMode (Pin, OUTPUT);        // bring low for 500 us
@@ -27,7 +27,7 @@ void DS18S20MED::OneWireReset (int Pin) // reset.  Should improve to act as a pr
 }
 
 // Send data to a 1-wire device
-void DS18S20MED::OneWireOutByte (int Pin, uint8_t d) // output byte d (least sig bit first).
+void DS18B20MED::OneWireOutByte (int Pin, uint8_t d) // output byte d (least sig bit first).
 {
   byte n;
 
@@ -54,7 +54,7 @@ void DS18S20MED::OneWireOutByte (int Pin, uint8_t d) // output byte d (least sig
 }
 
 //Read data from a 1-wire device
-uint8_t DS18S20MED::OneWireInByte (int Pin) // read byte, least sig byte first
+uint8_t DS18B20MED::OneWireInByte (int Pin) // read byte, least sig byte first
 {
   byte d, n, b;
 
@@ -74,7 +74,7 @@ uint8_t DS18S20MED::OneWireInByte (int Pin) // read byte, least sig byte first
 
 // Read temperature from a DS18B20.
 // int sensorPin: Arduino digital I/O pin connected to sensor
-int DS18S20MED::getCurrentTemp (int sensorPin)
+int DS18B20MED::getCurrentTemp (int sensorPin)
 {
   int HighByte, LowByte, TReading;
   OneWireReset (sensorPin);
@@ -93,7 +93,7 @@ int DS18S20MED::getCurrentTemp (int sensorPin)
 }
 
 // funzione princale di letture. agisce su variabile esterna
-void DS18S20MED::DataConv (int TReading2, char *temp) //converte il valore in centesimi di grado e poi in stringa di caratteri
+void DS18B20MED::DataConv (int TReading2, char *temp) //converte il valore in centesimi di grado e poi in stringa di caratteri
 {
   int Tc_100, whole, fract, sign;
 sign = TReading2 & 0x8000;  // test most sig bit
@@ -118,7 +118,7 @@ sign = TReading2 & 0x8000;  // test most sig bit
 }
 
 // ciclo di lettura del sensore
-int DS18S20MED::lettCycle(int SENSOR)
+int DS18B20MED::lettCycle(int SENSOR)
  {
 long tempCalc = 0;
 int M1 = -9999;
