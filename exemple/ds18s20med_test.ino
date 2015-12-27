@@ -1,4 +1,4 @@
-#include <DS18S20MED.h>
+#include <DS18B20MED.h>
 
 #define SENSOR_A  6 
 //#define SENSOR_B  8 //required if more sensor are used
@@ -11,7 +11,7 @@ long shortLoop = 1000;
 long shortDelay = 100;
 int lettTodo = 10;
 
-DS18S20MED mytest (shortDelay, shortLoop, lettTodo);
+DS18B20MED mytest (shortDelay, shortLoop, lettTodo);
 
 void setup() {
   // Set up the data pins for communication with DS18B20 sensors
