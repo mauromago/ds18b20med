@@ -80,7 +80,7 @@ int DS18B20MED::getCurrentTemp (int sensorPin)
   OneWireReset (sensorPin);
   OneWireOutByte (sensorPin, 0xcc);
   OneWireOutByte (sensorPin, 0x44); // Perform temperature conversion, strong pullup for one sec
-
+  delayMicroseconds (1000); //added in second time to check with long webserver reading
   OneWireReset (sensorPin);
   OneWireOutByte (sensorPin, 0xcc);
   OneWireOutByte (sensorPin, 0xbe);
