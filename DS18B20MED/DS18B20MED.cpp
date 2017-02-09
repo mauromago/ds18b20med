@@ -7,10 +7,10 @@ sensori di temperatura ds18b20
 #include <DS18B20MED.h>
 #include "Arduino.h"
 
-DS18B20MED::DS18B20MED(int sDelay, int sLoop, int letture)
+DS18B20MED::DS18B20MED(int sDelay, int letture) //DS18B20MED::DS18B20MED(int sDelay, int sLoop, int letture)
 {
  _sDelay = sDelay;
- _sLoop = sLoop;
+ //_sLoop = sLoop;
  _letture = letture;
 
 }
@@ -125,10 +125,10 @@ int M2 = -9999;
 int m1 = 9999;
 int m2 = 9999;
 int som = 0;
-  getCurrentTemp(SENSOR);
-  delay (_sDelay);
-  getCurrentTemp(SENSOR); //fatte due letture a vuoto
-  delay (_sDelay);
+  //getCurrentTemp(SENSOR);
+  //delay (_sDelay);
+  //getCurrentTemp(SENSOR); //fatte due letture a vuoto
+  //delay (_sDelay);
 for (int x = 0; x <_letture; x++) {
 	 som = getCurrentTemp(SENSOR)*10;
 	if (som>M2) {
