@@ -8,6 +8,7 @@ Correceted some bug
 This library can work on one sensor per pin only. Library don't check interupt, so not suggested to use if your code usa int.
 It don't check CRC too
 Removed useless shrt loop
+Need to be used with Arduino IDE greater that 1
 
 
 # ------
