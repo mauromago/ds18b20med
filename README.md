@@ -7,6 +7,7 @@ Using DS18B20 with Arduino for read outside temperature I discovered that air is
 Correceted some bug
 This library can work on one sensor per pin only. Library don't check interupt, so not suggested to use if your code usa int.
 It don't check CRC too
+Removed useless shrt loop
 
 
 # ------
@@ -23,13 +24,10 @@ convert the value in caracter sting oseful for send it on ethernet
 
 # ------
 You have to generate the class instance with three parameter
-DS18B20MED mytest (shortDelay, shortLoop, lettTodo);
+DS18B20MED mytest (shortDelay, lettTodo);
 
 -shodtDelay ; 
 delay in millisecond after the two discarded sensor read in cycle
-
--shortLoop ; 
-delay after sensor read in useful reading in the cycle
 
 -lettTodo ; 
 the number of reading to do for calculare de median value. The two higher value and the two lower value are removed from values used for median. Two discarde read are not included in this value
