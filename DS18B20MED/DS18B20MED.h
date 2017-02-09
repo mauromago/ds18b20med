@@ -6,10 +6,10 @@
 class DS18B20MED{
 
 private:
-int _sDelay, _sLoop, _letture;
+int _sDelay, _letture; //int _sDelay, _sLoop, _letture;
 	
 public:
-DS18B20MED (int sDelay, int sLoop, int letture);
+DS18B20MED (int sDelay, int letture); //DS18B20MED (int sDelay, int sLoop, int letture);
 
 void OneWireReset (int Pin);
 void OneWireOutByte (int Pin, uint8_t d);
