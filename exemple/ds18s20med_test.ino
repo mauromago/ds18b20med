@@ -7,11 +7,11 @@
 char temp_string_a[7];
 //char temp_string_b[7]; //required if more sensor are used
 //char temp_string_c[7];
-long shortLoop = 1000;
+//long shortLoop = 1000;
 long shortDelay = 100;
 int lettTodo = 10;
 
-DS18B20MED mytest (shortDelay, shortLoop, lettTodo);
+DS18B20MED mytest (shortDelay, lettTodo); //DS18B20MED mytest (shortDelay, shortLoop, lettTodo);
 
 void setup() {
   // Set up the data pins for communication with DS18B20 sensors
