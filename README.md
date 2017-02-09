@@ -1,7 +1,12 @@
 # ds18b20med
-arduino library for read temperature from ds18b20 with multiple read and median value. It require SPI library.
+arduino library for read temperature from ds18b20 with multiple read and median value.
  
-Using DS18B20 with Arduino for read outside temperature i discovered that air is not so uniform in its temperature. so i implemented code to make more read and calculate the median value. Now, to make my code more easy to write i put this code in a library. More important part are copied from other and older library not by me.
+Using DS18B20 with Arduino for read outside temperature I discovered that air is not so uniform in its temperature. so I implemented code to make more read and calculate the median value. Now, to make my code more easy to write I put this code in a library. More important part are copied from other and older library not wrote by me.
+
+# Update
+Correceted some bug
+This library can work on one sensor per pin only. Library don't check interupt, so not suggested to use if your code usa int.
+It don't check CRC too
 
 
 # ------
@@ -11,7 +16,7 @@ Three are the more important funtions:
 just return  the value of one single read from sensor in binary form
 
 -lettCycle (SENSOR) ;
-make a reading cycle so made two read discarded (looks me that first read after some minute of not use is lower that other) than make more read and calculate the median value from them.
+Make a reading cycle. So made more read and calculate the median value from them.
 
 -DataConv (value);
 convert the value in caracter sting oseful for send it on ethernet
