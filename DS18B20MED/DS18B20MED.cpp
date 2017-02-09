@@ -156,4 +156,4 @@ return (tempCalc);
 }
 
 // chimare le funzioni nel seguente modo
-//DataConv (lettCycle(sensore, tempo di ritardo corto, loop corto, numero di letture), stringa passata per referenza su cui scrivere);
+//DataConv (lettCycle(sensore, loop corto, numero di letture), stringa passata per referenza su cui scrivere);
