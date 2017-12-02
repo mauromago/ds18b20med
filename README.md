@@ -5,7 +5,7 @@ Using DS18B20 with Arduino for read outside temperature I discovered that air is
 
 # Update
 Correceted some bug
-This library can work on one sensor per pin only. Library don't check interupt, so not suggested to use if your code usa int.
+This library can work on one sensor per pin only. Library don't check interupt, so not suggested to use if your code use int.
 It don't check CRC too
 Removed useless shrt loop
 Need to be used with Arduino IDE greater that 1
