@@ -31,5 +31,5 @@ DS18B20MED mytest (shortDelay, lettTodo);
 delay in millisecond after the two discarded sensor read in cycle
 
 -lettTodo ; 
-the number of reading to do for calculare de median value. The two higher value and the two lower value are removed from values used for median. Two discarde read are not included in this value
+the number of reading to do for calculare de median value. The two higher value and the two lower value are removed from values used for median. Two discarded read are not included in this value
 
